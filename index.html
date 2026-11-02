@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jelajah Delta — Ekowisata Bahari, Warisan Majapahit &amp; Gastronomi Sidoarjo</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+
+  <!-- HEADER KAPSUL TERPUSAT (AUTO-HIDE SAAT SCROLL BAWAH, MUNCUL SAAT SCROLL ATAS) -->
+  <header id="smart-header" class="top-header">
+    <nav class="nav-pill" aria-label="Navigasi Utama">
+      <a href="#beranda" class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3L3 20h18L12 3z"/>
+            <path d="M12 10v6M9.5 16h5"/>
+          </svg>
+        </span>
+        <span class="brand-name">Jelajah Delta</span>
+        <span class="brand-region">Kab. Sidoarjo</span>
+      </a>
+
+      <span class="nav-sep desk-only" aria-hidden="true"></span>
+
+      <div class="nav-menu desk-only">
+        <a href="#peta-delta" class="nav-link active" data-spy="peta-delta">Peta Delta</a>
+        <a href="#lensa-waktu" class="nav-link" data-spy="lensa-waktu">Candi Pari</a>
+        <a href="#kalkulator" class="nav-link" data-spy="kalkulator">Anggaran</a>
+        <a href="#direktori" class="nav-link" data-spy="direktori">6 Koridor</a>
+      </div>
+
+      <span class="nav-sep desk-only" aria-hidden="true"></span>
+
+      <div class="nav-end">
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Ganti mode terang atau gelap" title="Ganti Mode Tampilan">
+          <!-- Ikon Matahari SVG Tajam (Muncul saat Dark Mode) -->
+          <svg id="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+          </svg>
+          <!-- Ikon Bulan SVG Tajam (Muncul saat Light Mode) -->
+          <svg id="icon-moon" class="hidden" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <a href="#kalkulator" class="btn btn-teal btn-sm desk-only">Susun Rencana</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- FLOATING DOCK BAWAH (MOBILE) -->
+  <nav id="mobile-dock" class="mobile-dock mob-only" aria-label="Navigasi Mobile">
+    <a href="#beranda" class="dock-link active" data-spy="beranda">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V9.5z"/></svg>
+      <span>Awal</span>
+    </a>
+    <a href="#peta-delta" class="dock-link" data-spy="peta-delta">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      <span>Peta</span>
+    </a>
+    <a href="#lensa-waktu" class="dock-link" data-spy="lensa-waktu">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+      <span>Sejarah</span>
+    </a>
+    <a href="#kalkulator" class="dock-link" data-spy="kalkulator">
+      <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="7" y1="9" x2="17" y2="9"/><line x1="7" y1="14" x2="13" y2="14"/></svg>
+      <span>Biaya</span>
+    </a>
+  </nav>
+
+  <main id="beranda">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-block">
+      <div class="container">
+        <div class="hero-intro">
+          <div class="inline-status">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Dataran Aluvial Sungai Brantas &bull; Selat Madura</span>
+          </div>
+          <h1 class="hero-title">
+            Menelusuri Muara Kali Porong, Candi Bata Abad ke-14, &amp; Dapur Pesisir Sidoarjo.
+          </h1>
+          <p class="hero-lead">
+            Diapit percabangan Kali Mas di utara dan Kali Porong di selatan, lanskap delta Sidoarjo menyimpan pulau endapan mangrove berpenghuni burung air, arsitektur terakota era Hayam Wuruk, hingga sentra pengasapan bandeng tambak tradisional.
+          </p>
+          <div class="hero-cta">
+            <a href="#peta-delta" class="btn btn-teal">Jelajahi Peta Asli Delta</a>
+            <a href="#lensa-waktu" class="btn btn-outline">Bandingkan Arsip Candi Pari</a>
+          </div>
+        </div>
+
+        <div class="stats-row">
+          <div class="card stat-box">
+            <span class="stat-kicker">Garis Pesisir Timur</span>
+            <strong class="stat-num">28,3 <small>km</small></strong>
+            <p>Bentang tambak bandeng payau dan sabuk bakau menghadap Selat Madura.</p>
+          </div>
+          <div class="card stat-box">
+            <span class="stat-kicker">Angka Tahun Candi Pari</span>
+            <strong class="stat-num">1371 <small>M</small></strong>
+            <p>Pahat angka 1293 Saka pada ambang pintu batu era Majapahit klasik.</p>
+          </div>
+          <div class="card stat-box">
+            <span class="stat-kicker">Daratan Sedimentasi</span>
+            <strong class="stat-num">~80 <small>Ha</small></strong>
+            <p>Luas kawasan Pulau Sarinah di muara Tlocor yang dihijaukan mangrove.</p>
+          </div>
+          <div class="card stat-box">
+            <span class="stat-kicker">Sentra Batik Tulis Jetis</span>
+            <strong class="stat-num">1675 <small>M</small></strong>
+            <p>Tradisi canting tulis motif Merak Beras Utah yang bertahan lebih dari 3,5 abad.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FITUR A: PETA INTERNET ASLI SIDOARJO (SATELIT & JALAN) ================= -->
+    <section id="peta-delta" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="pill-badge badge-teal">01 &bull; Peta Geospasial Internet</span>
+            <h2 class="section-title">Peta Interaktif Kabupaten Sidoarjo &amp; Muara Brantas</h2>
+            <p class="section-desc">Peta dimuat langsung dari internet sesuai titik koordinat GPS asli. Ganti mode antara <strong>Citra Satelit</strong> dan <strong>Peta Jalan</strong>, lalu klik pin lokasi untuk memusatkan kamera.</p>
+          </div>
+
+          <div class="map-toolbar-btns">
+            <div class="layer-switch" role="group" aria-label="Pilih Lapisan Peta Internet">
+              <button type="button" class="layer-btn active" data-layer="satelit">🛰️ Satelit</button>
+              <button type="button" class="layer-btn" data-layer="jalan">🗺️ Peta Jalan</button>
+            </div>
+            <button type="button" id="btn-reset-map" class="btn btn-outline btn-sm">Reset Fokus</button>
+          </div>
+        </div>
+
+        <div class="quick-pills" id="map-filter-pills" role="tablist" aria-label="Pilih Titik Destinasi"></div>
+
+        <div class="map-split">
+          <!-- Panggung Peta Internet (Web Mercator GPS + Fallback Vektor) -->
+          <div class="card map-stage">
+            <div class="map-topbar">
+              <span id="hud-coords" class="mono-label">GPS: 7°34'32" LS, 112°51'20" BT</span>
+              <span id="map-source-status" class="map-legend-note">Sumber Peta: Citra Satelit Esri / OSM</span>
+            </div>
+
+            <div class="svg-wrap">
+              <svg id="delta-svg" viewBox="0 0 768 480" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Peta Asli Wilayah Sidoarjo dan Selat Madura">
+                <rect width="768" height="480" class="svg-sea"/>
+
+                <g id="map-camera">
+                  <!-- Cadangan Peta Vektor (Otomatis Terlihat Jika Offline) -->
+                  <g id="offline-vector-map">
+                    <path class="svg-land" d="M0,0 L490,0 L545,180 L560,460 L0,480 Z"/>
+                    <path class="svg-river" d="M40,180 C180,120 340,65 510,20" stroke-width="9" fill="none"/>
+                    <path class="svg-river" d="M40,210 C175,320 330,415 535,435" stroke-width="12" fill="none"/>
+                    <ellipse cx="520" cy="433" rx="18" ry="9" fill="#10B981"/>
+                  </g>
+
+                  <!-- Grid Foto Peta Asli dari Internet (Zoom 11 Tiles Kabupaten Sidoarjo) -->
+                  <g id="internet-map-tiles"></g>
+
+                  <!-- Garis Halus Rute Sungai Porong ke Pulau Sarinah di Atas Peta -->
+                  <path d="M262,356 Q390,418 518,433" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="5 4" opacity="0.85"/>
+
+                  <!-- Pin Lokasi GPS Presisi -->
+                  <g id="map-pins"></g>
+                </g>
+
+                <!-- Penunjuk Arah Utara -->
+                <g transform="translate(42, 438)" pointer-events="none">
+                  <circle cx="0" cy="0" r="18" fill="rgba(15,23,42,0.82)" stroke="rgba(255,255,255,0.25)"/>
+                  <polygon points="0,-12 4,4 0,1 -4,4" fill="#14B8A6"/>
+                  <text x="0" y="-14" text-anchor="middle" fill="#F8FAFC" font-size="8" font-weight="700">U</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Panel Detail Destinasi -->
+          <article class="card detail-panel" aria-live="polite">
+            <div class="panel-top">
+              <span id="det-badge" class="pill-badge badge-teal">Bahari</span>
+              <span id="det-code" class="mono-label">SDA-01</span>
+            </div>
+
+            <h3 id="det-title" class="panel-title">Pulau Sarinah &amp; Dermaga Tlocor</h3>
+            <p id="det-sub" class="panel-sub">Kecamatan Jabon &bull; Muara Kali Porong</p>
+
+            <div class="media-frame">
+              <div id="det-skel" class="shimmer"></div>
+              <img id="det-img" alt="Visual destinasi Sidoarjo" crossorigin="anonymous">
+              <a id="det-credit" class="credit-pill" href="https://commons.wikimedia.org" target="_blank" rel="noopener noreferrer">Wikimedia Commons</a>
+            </div>
+
+            <p id="det-desc" class="panel-desc">-</p>
+
+            <div class="spec-table">
+              <div class="spec-row">
+                <span>Rute Transportasi</span>
+                <strong id="det-route">-</strong>
+              </div>
+              <div class="spec-row">
+                <span>Jam Kunjungan Ideal</span>
+                <strong id="det-hours">-</strong>
+              </div>
+              <div class="spec-row">
+                <span>Retribusi / Biaya Dasar</span>
+                <strong id="det-price" class="text-teal">-</strong>
+              </div>
+            </div>
+
+            <button type="button" id="btn-to-calc" class="btn btn-teal btn-block">
+              Simulasikan Kunjungan Ini &darr;
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FITUR B: SPLIT SLIDER DULU VS SEKARANG CANDI PARI ================= -->
+    <section id="lensa-waktu" class="section section-muted">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="pill-badge badge-terracotta">02 &bull; Dokumentasi Cagar Budaya</span>
+            <h2 class="section-title">Candi Pari: Arsip Pemugaran Kolonial vs Kondisi Masa Kini</h2>
+            <p class="section-desc">Geser garis pembagi vertikal untuk membandingkan kondisi historis era pendataan Hindia Belanda dengan struktur bata merah Candi Pari setelah pemugaran.</p>
+          </div>
+        </div>
+
+        <div class="split-grid">
+          <div class="card split-card">
+            <div class="split-stage" id="split-stage">
+              <img id="split-img-after" class="split-layer" alt="Candi Pari bata merah masa kini" crossorigin="anonymous">
+              <span class="corner-tag tag-right">Masa Kini (Terawat)</span>
+
+              <div id="split-before-wrap" class="split-before-wrap">
+                <img id="split-img-before" class="split-layer vintage-filter" alt="Arsip kolonial Candi Pari masa lampau" crossorigin="anonymous">
+                <span class="corner-tag tag-left">Arsip Historis (Dulu)</span>
+              </div>
+
+              <div id="split-divider" class="split-divider" style="left: 50%;">
+                <div class="split-handle" aria-hidden="true">◀ ▶</div>
+              </div>
+
+              <input type="range" id="split-range" class="split-range-overlay" min="4" max="96" value="50" aria-label="Geser perbandingan foto dulu dan sekarang Candi Pari">
+            </div>
+          </div>
+
+          <aside class="card history-notes">
+            <span class="pill-badge badge-slate">Catatan Arkeologi Porong</span>
+            <h3>Akulturasi Bata Majapahit &amp; Langgam Campa</h3>
+            <p>
+              Didirikan pada tahun <strong>1293 Saka (1371 Masehi)</strong> di masa pemerintahan Prabu Hayam Wuruk untuk mengenang tempat menghilangnya tokoh legenda Joko Pandelegan beserta istrinya di lumbung padi.
+            </p>
+            <ul class="fact-points">
+              <li><strong>Konstruksi Bata Kosod:</strong> Disusun dari bata merah padat yang digosok saling mengunci dengan air tanpa semen modern.</li>
+              <li><strong>Pengaruh Campa:</strong> Tubuh candi tambun berdenah segi empat dengan atap limas dan ambang pintu berbingkai batu andesit menyerupai candi di pesisir Vietnam selatan.</li>
+              <li><strong>Jejak Pangan Delta:</strong> Nama <em>Pari</em> (padi) menegaskan peran dataran aluvial Porong sebagai lumbung beras utama keraton Majapahit.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= FITUR C: KALKULATOR ITINERARI & BOARDING PASS ================= -->
+    <section id="kalkulator" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="pill-badge badge-teal">03 &bull; Delta Budget Planner</span>
+            <h2 class="section-title">Kalkulator Itinerari &amp; Anggaran 1 Hari</h2>
+            <p class="section-desc">Sesuaikan fokus wisata, ukuran rombongan, dan moda transportasi lokal untuk mendapatkan estimasi biaya riil sekaligus mencetak tiket perjalanan digital.</p>
+          </div>
+          <div class="active-route-chip">
+            <span>Destinasi Terhubung:</span>
+            <strong id="calc-linked-spot">Pulau Sarinah &amp; Dermaga Tlocor</strong>
+          </div>
+        </div>
+
+        <div class="planner-grid">
+          <div class="card planner-controls">
+            <div class="field-block">
+              <span class="field-label">1. Pilih Preferensi Jalur Wisata</span>
+              <div class="pref-grid" role="group" aria-label="Preferensi Wisata">
+                <button type="button" class="trip-theme-btn active" data-plan="bahari">
+                  <strong>Ekowisata Pesisir Bahari</strong>
+                  <span>Dermaga Tlocor, Pulau Sarinah &amp; Tambak Kalanganyar</span>
+                </button>
+                <button type="button" class="trip-theme-btn" data-plan="candi">
+                  <strong>Jejak Candi Majapahit</strong>
+                  <span>Candi Pari Porong &amp; Gapura Candi Dermo Wonoayu</span>
+                </button>
+                <button type="button" class="trip-theme-btn" data-plan="kuliner">
+                  <strong>Wisata Belanja &amp; Kuliner</strong>
+                  <span>Sentra Batik Tulis Jetis, Kupang Lontong &amp; Bandeng Asap</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="field-block">
+              <div class="label-split">
+                <label for="group-slider" class="field-label">2. Jumlah Anggota Rombongan</label>
+                <strong class="pax-badge"><span id="group-count">4</span> Orang</strong>
+              </div>
+              <input type="range" id="group-slider" min="1" max="15" step="1" value="4" class="range-input">
+              <div class="range-scale" aria-hidden="true">
+                <span>1 Org</span>
+                <span>5 Org</span>
+                <span>10 Org</span>
+                <span>15 Org</span>
+              </div>
+            </div>
+
+            <div class="field-block">
+              <span class="field-label">3. Moda Transportasi Lokal</span>
+              <div class="radio-stack">
+                <label class="radio-card">
+                  <input type="radio" name="transport" value="perahu" checked>
+                  <div class="radio-body">
+                    <strong>Sewa Perahu Motor Muara Tlocor</strong>
+                    <span>Rp 200.000 / perahu nelayan (maksimal 10 penumpang PP)</span>
+                  </div>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="transport" value="mobil">
+                  <div class="radio-body">
+                    <strong>Angkutan Kota / Rental Mobil Harian</strong>
+                    <span>Rp 400.000 / unit termasuk BBM keliling kecamatan (maks. 7 org/unit)</span>
+                  </div>
+                </label>
+                <label class="radio-card">
+                  <input type="radio" name="transport" value="motor">
+                  <div class="radio-body">
+                    <strong>Motor Pribadi Lintas Tanggul &amp; Kota</strong>
+                    <span>Rp 28.000 / motor (estimasi BBM + parkir kawasan, 2 org/motor)</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="card planner-output">
+            <div class="receipt-box">
+              <h3>Rincian Estimasi Biaya (1 Hari)</h3>
+              <div class="receipt-row">
+                <span>Tiket Masuk &amp; Retribusi Kawasan</span>
+                <strong id="out-ticket">Rp 60.000</strong>
+              </div>
+              <div class="receipt-row">
+                <span>Alokasi Transportasi / Sewa Perahu</span>
+                <strong id="out-transport">Rp 200.000</strong>
+              </div>
+              <div class="receipt-row">
+                <span>Konsumsi Khas (Kupang Lontong + Sate Kerang + Degan)</span>
+                <strong id="out-food">Rp 128.000</strong>
+              </div>
+              <div class="receipt-total">
+                <div>
+                  <span>Estimasi per Orang</span>
+                  <strong id="out-per-pax" class="per-pax-val">Rp 97.000 / org</strong>
+                </div>
+                <div class="text-right">
+                  <span>Total Rombongan</span>
+                  <strong id="out-total" class="grand-total-val">Rp 388.000</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="pass-generator">
+              <div class="pass-form-row">
+                <label for="pass-name">Nama Koordinator / Pelancong</label>
+                <input type="text" id="pass-name" class="text-input" value="Penjelajah Brantas" maxlength="30" placeholder="Ketik nama Anda...">
+              </div>
+
+              <div class="canvas-holder">
+                <canvas id="pass-canvas" width="680" height="320" aria-label="Pratinjau Delta Boarding Pass"></canvas>
+              </div>
+
+              <button type="button" id="btn-download-pass" class="btn btn-teal btn-block">
+                Cetak Tiket Perjalanan (.PNG)
+              </button>
+              <p id="pass-msg" class="pass-msg" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DIREKTORI LENGKAP 6 DESTINASI SIDOARJO ================= -->
+    <section id="direktori" class="section section-muted">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="pill-badge badge-slate">04 &bull; Direktori Terverifikasi</span>
+            <h2 class="section-title">Enam Destinasi Otentik Delta Sidoarjo</h2>
+            <p class="section-desc">Saring berdasarkan kategori untuk melihat dokumentasi visual beserta rekomendasi aktivitas di lapangan.</p>
+          </div>
+
+          <div class="filter-group" role="group" aria-label="Filter Kategori Direktori">
+            <button type="button" class="cat-filter-btn active" data-cat="semua">Semua (6)</button>
+            <button type="button" class="cat-filter-btn" data-cat="Bahari">Bahari</button>
+            <button type="button" class="cat-filter-btn" data-cat="Sejarah">Sejarah</button>
+            <button type="button" class="cat-filter-btn" data-cat="Kuliner">Kuliner</button>
+            <button type="button" class="cat-filter-btn" data-cat="Kriya">Kriya</button>
+          </div>
+        </div>
+
+        <div id="catalog-grid" class="catalog-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-flex">
+      <div>
+        <strong>Jelajah Delta &mdash; Kabupaten Sidoarjo, Jawa Timur</strong>
+        <p>Direktori independen ekowisata muara Kali Porong, cagar budaya Majapahit, dan gastronomi pesisir.</p>
+      </div>
+      <div class="footer-right">
+        <p>100% Vanilla HTML5, CSS3 &amp; JavaScript &bull; Peta OSM, Satelit Esri &amp; Wikimedia Commons</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

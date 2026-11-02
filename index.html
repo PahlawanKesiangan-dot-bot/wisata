@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
 </head>
 <body>
 
-  <!-- HEADER KAPSUL TERPUSAT (AUTO-HIDE SAAT SCROLL BAWAH, MUNCUL SAAT SCROLL ATAS) -->
+  <!-- HEADER KAPSUL TERPUSAT (SEMBUNYI SAAT SCROLL BAWAH, MUNCUL SAAT SCROLL ATAS) -->
   <header id="smart-header" class="top-header">
     <nav class="nav-pill" aria-label="Navigasi Utama">
       <a href="#beranda" class="brand">
@@ -34,15 +34,15 @@
       <span class="nav-sep desk-only" aria-hidden="true"></span>
 
       <div class="nav-end">
-        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Ganti mode terang atau gelap" title="Ganti Mode Tampilan">
-          <!-- Ikon Matahari SVG Tajam (Muncul saat Dark Mode) -->
-          <svg id="icon-sun" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <button type="button" id="theme-toggle" class="icon-btn" aria-label="Ganti mode tampilan" title="Ubah Suasana Warna">
+          <!-- Ikon Bulan (Tampil saat Mode Cerah Teduh aktif) -->
+          <svg id="icon-moon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <!-- Ikon Matahari (Tampil saat Mode Senja aktif) -->
+          <svg id="icon-sun" class="hidden" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <circle cx="12" cy="12" r="4"/>
             <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-          </svg>
-          <!-- Ikon Bulan SVG Tajam (Muncul saat Light Mode) -->
-          <svg id="icon-moon" class="hidden" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
         <a href="#kalkulator" class="btn btn-teal btn-sm desk-only">Susun Rencana</a>
@@ -77,7 +77,7 @@
         <div class="hero-intro">
           <div class="inline-status">
             <span class="pulse-dot" aria-hidden="true"></span>
-            <span>Dataran Aluvial Sungai Brantas &bull; Selat Madura</span>
+            <span>Dataran Aluvial Sungai Brantas &bull; Pesisir Selat Madura</span>
           </div>
           <h1 class="hero-title">
             Menelusuri Muara Kali Porong, Candi Bata Abad ke-14, &amp; Dapur Pesisir Sidoarjo.
@@ -116,20 +116,20 @@
       </div>
     </section>
 
-    <!-- ================= FITUR A: PETA INTERNET ASLI SIDOARJO (SATELIT & JALAN) ================= -->
+    <!-- ================= FITUR A: PETA INTERNET ASLI SIDOARJO (CERAH & SATELIT) ================= -->
     <section id="peta-delta" class="section">
       <div class="container">
         <div class="section-head">
           <div>
             <span class="pill-badge badge-teal">01 &bull; Peta Geospasial Internet</span>
             <h2 class="section-title">Peta Interaktif Kabupaten Sidoarjo &amp; Muara Brantas</h2>
-            <p class="section-desc">Peta dimuat langsung dari internet sesuai titik koordinat GPS asli. Ganti mode antara <strong>Citra Satelit</strong> dan <strong>Peta Jalan</strong>, lalu klik pin lokasi untuk memusatkan kamera.</p>
+            <p class="section-desc">Peta dimuat langsung dari internet sesuai koordinat GPS asli. Beralih antara <strong>Peta Jalan Cerah</strong> dan <strong>Citra Satelit</strong>, lalu klik pin lokasi untuk memusatkan kamera.</p>
           </div>
 
           <div class="map-toolbar-btns">
             <div class="layer-switch" role="group" aria-label="Pilih Lapisan Peta Internet">
-              <button type="button" class="layer-btn active" data-layer="satelit">🛰️ Satelit</button>
-              <button type="button" class="layer-btn" data-layer="jalan">🗺️ Peta Jalan</button>
+              <button type="button" class="layer-btn active" data-layer="jalan">🗺️ Peta Jalan</button>
+              <button type="button" class="layer-btn" data-layer="satelit">🛰️ Satelit</button>
             </div>
             <button type="button" id="btn-reset-map" class="btn btn-outline btn-sm">Reset Fokus</button>
           </div>
@@ -138,11 +138,11 @@
         <div class="quick-pills" id="map-filter-pills" role="tablist" aria-label="Pilih Titik Destinasi"></div>
 
         <div class="map-split">
-          <!-- Panggung Peta Internet (Web Mercator GPS + Fallback Vektor) -->
+          <!-- Panggung Peta Internet -->
           <div class="card map-stage">
             <div class="map-topbar">
               <span id="hud-coords" class="mono-label">GPS: 7°34'32" LS, 112°51'20" BT</span>
-              <span id="map-source-status" class="map-legend-note">Sumber Peta: Citra Satelit Esri / OSM</span>
+              <span id="map-source-status" class="map-legend-note">Sumber Peta: Peta Kartografi OpenStreetMap</span>
             </div>
 
             <div class="svg-wrap">
@@ -150,29 +150,29 @@
                 <rect width="768" height="480" class="svg-sea"/>
 
                 <g id="map-camera">
-                  <!-- Cadangan Peta Vektor (Otomatis Terlihat Jika Offline) -->
+                  <!-- Cadangan Peta Vektor Teduh (Otomatis Tampil Jika Offline) -->
                   <g id="offline-vector-map">
                     <path class="svg-land" d="M0,0 L490,0 L545,180 L560,460 L0,480 Z"/>
                     <path class="svg-river" d="M40,180 C180,120 340,65 510,20" stroke-width="9" fill="none"/>
                     <path class="svg-river" d="M40,210 C175,320 330,415 535,435" stroke-width="12" fill="none"/>
-                    <ellipse cx="520" cy="433" rx="18" ry="9" fill="#10B981"/>
+                    <ellipse cx="520" cy="433" rx="18" ry="9" fill="#0F766E"/>
                   </g>
 
-                  <!-- Grid Foto Peta Asli dari Internet (Zoom 11 Tiles Kabupaten Sidoarjo) -->
-                  <g id="internet-map-tiles"></g>
+                  <!-- Grid Foto Peta Asli dari Internet -->
+                  <g id="internet-map-tiles" class="road-mode"></g>
 
-                  <!-- Garis Halus Rute Sungai Porong ke Pulau Sarinah di Atas Peta -->
-                  <path d="M262,356 Q390,418 518,433" fill="none" stroke="#2DD4BF" stroke-width="2" stroke-dasharray="5 4" opacity="0.85"/>
+                  <!-- Garis Alur Perahu Kali Porong ke Pulau Sarinah -->
+                  <path d="M262,356 Q390,418 518,433" fill="none" stroke="#0F766E" stroke-width="2.2" stroke-dasharray="5 4" opacity="0.9"/>
 
                   <!-- Pin Lokasi GPS Presisi -->
                   <g id="map-pins"></g>
                 </g>
 
-                <!-- Penunjuk Arah Utara -->
+                <!-- Kompas Penunjuk Utara -->
                 <g transform="translate(42, 438)" pointer-events="none">
-                  <circle cx="0" cy="0" r="18" fill="rgba(15,23,42,0.82)" stroke="rgba(255,255,255,0.25)"/>
-                  <polygon points="0,-12 4,4 0,1 -4,4" fill="#14B8A6"/>
-                  <text x="0" y="-14" text-anchor="middle" fill="#F8FAFC" font-size="8" font-weight="700">U</text>
+                  <circle cx="0" cy="0" r="18" fill="rgba(253,252,249,0.92)" stroke="#C9C4B8"/>
+                  <polygon points="0,-12 4,4 0,1 -4,4" fill="#0F766E"/>
+                  <text x="0" y="-14" text-anchor="middle" fill="#1E292B" font-size="8" font-weight="700">U</text>
                 </g>
               </svg>
             </div>

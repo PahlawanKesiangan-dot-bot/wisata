@@ -1,6 +1,6 @@
 /* ==========================================================================
-   JELAJAH DELTA — PURE CSS TAILWIND DESIGN SYSTEM + SMART HIDE NAVBAR
-   Zero Frameworks | WCAG AA High Contrast | Real Internet Map Styling
+   JELAJAH DELTA — WARM DAYLIGHT & SOFT SAGE DESIGN SYSTEM (EYE-FRIENDLY)
+   Zero Harsh Pure-White Glare | Soft Dusk Optional Mode | Pure CSS3
    ========================================================================== */
 
 *, *::before, *::after {
@@ -10,73 +10,75 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* --- TOKEN TAILWIND LIGHT MODE (SLATE) --- */
+/* --- TEMA UTAMA (DEFAULT): CERAH TEDUH / WARM ALABASTER & COASTAL SAGE --- */
 :root,
 [data-theme="light"] {
-  --bg-page: #F8FAFC;
-  --bg-muted: #F1F5F9;
-  --bg-card: #FFFFFF;
-  --bg-pill: rgba(255, 255, 255, 0.9);
-  --bg-nav-active: #CCFBF1;
+  --bg-page: #F6F5F0;        /* Gading sejuk / Warm Stone-50 — tidak menyilaukan mata */
+  --bg-muted: #ECEAE2;       /* Pasir lembut / Soft Sand untuk seksi selang-seling */
+  --bg-card: #FDFCF9;        /* Putih susu hangat pengganti #FFFFFF tajam */
+  --bg-subtle-box: #F2F0E8;  /* Kotak input & rincian lembut */
+  --bg-pill: rgba(253, 252, 249, 0.9);
+  --bg-nav-active: #D9EFEA;
 
-  --text-main: #0F172A;
-  --text-sec: #475569;
-  --text-muted: #64748B;
+  --text-main: #1E292B;      /* Arang pinus teduh — tajam dibaca tanpa kontras kasar */
+  --text-sec: #4A5859;       /* Abu-abu kehijauan tenang */
+  --text-muted: #707D7E;
 
-  --border-base: #E2E8F0;
-  --border-hover: #CBD5E1;
+  --border-base: #DFDCD2;    /* Garis tepi batu kapur hangat */
+  --border-hover: #C8C3B6;
 
-  --teal-primary: #0D9488;
-  --teal-hover: #0F766E;
-  --teal-soft: #CCFBF1;
-  --teal-text: #0F766E;
+  --teal-primary: #0F766E;   /* Hijau pesisir teduh */
+  --teal-hover: #115E59;
+  --teal-soft: #D9EFEA;
+  --teal-text: #0D5C56;
 
-  --terra-primary: #C2410C;
-  --terra-soft: #FFEDD5;
-  --terra-text: #9A3412;
+  --terra-primary: #B84A27;  /* Terakota bata Candi Pari yang hangat */
+  --terra-soft: #F6E3DC;
+  --terra-text: #8F3418;
 
-  --shadow-card: 0 1px 3px 0 rgb(0 0 0 / 0.08), 0 1px 2px -1px rgb(0 0 0 / 0.06);
-  --shadow-float: 0 12px 30px -6px rgb(15 23 42 / 0.12);
+  --shadow-card: 0 2px 8px -2px rgba(30, 41, 43, 0.06), 0 1px 3px 0 rgba(30, 41, 43, 0.04);
+  --shadow-float: 0 12px 28px -6px rgba(30, 41, 43, 0.1);
 
-  --map-sea: #0B253C;
-  --map-land: #E2E8F0;
-  --map-river: #38BDF8;
-  --skel-a: #E2E8F0;
-  --skel-b: #F8FAFC;
+  --map-sea: #CFE6F0;
+  --map-land: #EAE7DC;
+  --map-river: #5BA8C4;
+  --skel-a: #E6E3D8;
+  --skel-b: #F4F2EB;
 }
 
-/* --- TOKEN TAILWIND DARK MODE (SLATE-950) --- */
+/* --- TEMA OPSIONAL: SENJA TEDUH (SOFT DUSK SLATE — BUKAN HITAM PEKAT) --- */
 [data-theme="dark"] {
-  --bg-page: #020617;
-  --bg-muted: #0F172A;
-  --bg-card: #1E293B;
-  --bg-pill: rgba(15, 23, 42, 0.88);
-  --bg-nav-active: rgba(20, 184, 166, 0.16);
+  --bg-page: #182226;
+  --bg-muted: #131B1E;
+  --bg-card: #212D32;
+  --bg-subtle-box: #1A2529;
+  --bg-pill: rgba(33, 45, 50, 0.9);
+  --bg-nav-active: rgba(45, 212, 191, 0.16);
 
-  --text-main: #F8FAFC;
-  --text-sec: #CBD5E1;
-  --text-muted: #94A3B8;
+  --text-main: #ECEAE4;
+  --text-sec: #BAC4C6;
+  --text-muted: #889699;
 
-  --border-base: #334155;
-  --border-hover: #475569;
+  --border-base: #314147;
+  --border-hover: #43575E;
 
-  --teal-primary: #14B8A6;
-  --teal-hover: #2DD4BF;
-  --teal-soft: rgba(20, 184, 166, 0.18);
+  --teal-primary: #2DD4BF;
+  --teal-hover: #5EEAD4;
+  --teal-soft: rgba(45, 212, 191, 0.16);
   --teal-text: #5EEAD4;
 
-  --terra-primary: #EA580C;
-  --terra-soft: rgba(234, 88, 12, 0.2);
-  --terra-text: #FDBA74;
+  --terra-primary: #EA6A3E;
+  --terra-soft: rgba(234, 106, 62, 0.18);
+  --terra-text: #FDBA9A;
 
-  --shadow-card: 0 2px 6px 0 rgb(0 0 0 / 0.35);
-  --shadow-float: 0 14px 34px -6px rgb(0 0 0 / 0.65);
+  --shadow-card: 0 4px 12px -2px rgba(0, 0, 0, 0.25);
+  --shadow-float: 0 14px 32px -6px rgba(0, 0, 0, 0.45);
 
-  --map-sea: #081B2E;
-  --map-land: #1E293B;
-  --map-river: #0284C7;
-  --skel-a: #1E293B;
-  --skel-b: #334155;
+  --map-sea: #162E3D;
+  --map-land: #243137;
+  --map-river: #2B7A9B;
+  --skel-a: #212D32;
+  --skel-b: #2C3B41;
 }
 
 html {
@@ -88,10 +90,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   background-color: var(--bg-page);
   color: var(--text-main);
-  line-height: 1.6;
+  line-height: 1.62;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
   overflow-x: hidden;
 }
 
@@ -127,7 +129,7 @@ body {
   display: inline-flex;
   align-items: center;
   border-radius: 9999px;
-  padding: 3px 10px;
+  padding: 3px 11px;
   font-size: 0.75rem;
   font-weight: 600;
   line-height: 1.4;
@@ -144,7 +146,7 @@ body {
 }
 
 .badge-slate {
-  background-color: var(--bg-muted);
+  background-color: var(--bg-subtle-box);
   color: var(--text-sec);
   border: 1px solid var(--border-base);
 }
@@ -181,11 +183,11 @@ body {
 
 .btn-teal {
   background-color: var(--teal-primary);
-  color: #FFFFFF;
+  color: #FDFCF9;
 }
 
 [data-theme="dark"] .btn-teal {
-  color: #042F2E;
+  color: #0F2421;
   font-weight: 700;
 }
 
@@ -201,7 +203,7 @@ body {
 
 .btn-outline:hover {
   border-color: var(--border-hover);
-  background-color: var(--bg-muted);
+  background-color: var(--bg-subtle-box);
 }
 
 .btn-sm {
@@ -215,7 +217,7 @@ body {
 }
 
 /* ==========================================================================
-   PERBAIKAN NAVBAR SCREENSHOT: COMPACT PILL + HIDE ON SCROLL DOWN
+   NAVBAR KAPSUL TERPUSAT (AUTO-HIDE SAAT SCROLL BAWAH)
    ========================================================================== */
 .top-header {
   position: fixed;
@@ -231,7 +233,6 @@ body {
   will-change: transform, opacity;
 }
 
-/* Tersembunyi mulus ke atas saat halaman digulir ke bawah */
 .top-header.header-hidden {
   transform: translateY(-140%);
   opacity: 0;
@@ -246,8 +247,8 @@ body {
   max-width: 100%;
   padding: 6px 8px 6px 10px;
   background-color: var(--bg-pill);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-base);
   border-radius: 9999px;
   box-shadow: var(--shadow-float);
@@ -285,7 +286,7 @@ body {
   font-weight: 600;
   padding: 2px 9px;
   border-radius: 9999px;
-  background-color: var(--bg-muted);
+  background-color: var(--bg-subtle-box);
   color: var(--text-sec);
   border: 1px solid var(--border-base);
 }
@@ -312,18 +313,17 @@ body {
   border-radius: 9999px;
   border: 1px solid transparent;
   white-space: nowrap;
-  transition: color 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+  transition: color 0.15s ease, background-color 0.15s ease;
 }
 
 .nav-link:hover {
   color: var(--text-main);
-  background-color: var(--bg-muted);
+  background-color: var(--bg-subtle-box);
 }
 
 .nav-link.active {
   color: var(--teal-text);
   background-color: var(--bg-nav-active);
-  border-color: rgba(20, 184, 166, 0.32);
 }
 
 .nav-end {
@@ -337,25 +337,29 @@ body {
   height: 34px;
   border-radius: 9999px;
   border: 1px solid var(--border-base);
-  background-color: var(--bg-muted);
+  background-color: var(--bg-subtle-box);
   color: var(--text-main);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+  transition: border-color 0.15s ease, color 0.15s ease;
 }
 
 .icon-btn:hover {
   border-color: var(--teal-primary);
   color: var(--teal-primary);
-  transform: rotate(12deg);
 }
 
-/* --- HERO SECTION --- */
+/* --- HERO SECTION DENGAN NUANSA HANGAT LEMBUT --- */
 .hero-block {
-  padding: 108px 0 48px 0;
+  padding: 108px 0 52px 0;
+  background: linear-gradient(180deg, rgba(217, 239, 234, 0.35) 0%, transparent 75%);
   border-bottom: 1px solid var(--border-base);
+}
+
+[data-theme="dark"] .hero-block {
+  background: linear-gradient(180deg, rgba(45, 212, 191, 0.06) 0%, transparent 75%);
 }
 
 .hero-intro {
@@ -367,12 +371,12 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 4px 12px;
+  padding: 5px 13px;
   border-radius: 9999px;
-  background-color: var(--bg-muted);
+  background-color: var(--bg-card);
   border: 1px solid var(--border-base);
   font-size: 0.78rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text-sec);
   margin-bottom: 18px;
 }
@@ -382,26 +386,26 @@ body {
   height: 8px;
   border-radius: 50%;
   background-color: var(--teal-primary);
-  animation: pulseAnim 2s infinite;
+  animation: pulseAnim 2.2s infinite;
 }
 
 @keyframes pulseAnim {
   0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.4; transform: scale(0.85); }
+  50% { opacity: 0.45; transform: scale(0.85); }
 }
 
 .hero-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.95rem);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
+  line-height: 1.16;
+  letter-spacing: -0.028em;
   margin-bottom: 16px;
 }
 
 .hero-lead {
   font-size: 1.05rem;
   color: var(--text-sec);
-  margin-bottom: 24px;
+  margin-bottom: 26px;
 }
 
 .hero-cta {
@@ -432,6 +436,7 @@ body {
   font-size: 1.85rem;
   font-weight: 800;
   letter-spacing: -0.03em;
+  color: var(--teal-primary);
   margin: 4px 0 6px 0;
 }
 
@@ -442,7 +447,7 @@ body {
 }
 
 .stat-box p {
-  font-size: 0.82rem;
+  font-size: 0.83rem;
   color: var(--text-sec);
 }
 
@@ -478,7 +483,7 @@ body {
   max-width: 66ch;
 }
 
-/* --- FITUR A: PETA INTERNET ASLI SIDOARJO --- */
+/* --- FITUR A: PETA INTERNET CERAH --- */
 .map-toolbar-btns {
   display: flex;
   align-items: center;
@@ -490,7 +495,7 @@ body {
   display: inline-flex;
   padding: 3px;
   border-radius: 9999px;
-  background-color: var(--bg-muted);
+  background-color: var(--bg-subtle-box);
   border: 1px solid var(--border-base);
 }
 
@@ -536,12 +541,12 @@ body {
 .spot-pill:hover,
 .spot-pill.active {
   background-color: var(--teal-primary);
-  color: #FFFFFF;
+  color: #FDFCF9;
   border-color: var(--teal-primary);
 }
 
 [data-theme="dark"] .spot-pill.active {
-  color: #042F2E;
+  color: #0F2421;
 }
 
 .map-split {
@@ -573,7 +578,7 @@ body {
 .svg-wrap {
   width: 100%;
   overflow: hidden;
-  background-color: #081B2E;
+  background-color: var(--map-sea);
 }
 
 #delta-svg {
@@ -586,9 +591,13 @@ body {
 .svg-land { fill: var(--map-land); stroke: var(--border-hover); stroke-width: 1.5; }
 .svg-river { stroke: var(--map-river); stroke-linecap: round; }
 
-/* Penyesuaian kontras halus pada peta jalan saat Dark Mode */
+/* Filter hangat lembut pada Peta Jalan agar selaras & tidak silau di mata */
+[data-theme="light"] #internet-map-tiles.road-mode {
+  filter: sepia(10%) saturate(0.92) brightness(0.98);
+}
+
 [data-theme="dark"] #internet-map-tiles.road-mode {
-  filter: brightness(0.86) contrast(1.06) saturate(0.9);
+  filter: brightness(0.82) contrast(1.05) saturate(0.85);
 }
 
 #map-camera {
@@ -644,7 +653,7 @@ body {
   height: 180px;
   border-radius: 12px;
   overflow: hidden;
-  background-color: var(--bg-muted);
+  background-color: var(--bg-subtle-box);
   border: 1px solid var(--border-base);
 }
 
@@ -678,9 +687,10 @@ body {
   bottom: 8px;
   right: 8px;
   z-index: 3;
-  background: rgba(15, 23, 42, 0.78);
-  color: #F8FAFC;
+  background: rgba(253, 252, 249, 0.88);
+  color: #1E292B;
   font-size: 0.68rem;
+  font-weight: 600;
   padding: 3px 8px;
   border-radius: 6px;
   text-decoration: none;
@@ -733,7 +743,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   user-select: none;
-  background-color: #1E293B;
+  background-color: var(--bg-subtle-box);
 }
 
 .split-layer {
@@ -746,7 +756,7 @@ body {
 }
 
 .vintage-filter {
-  filter: grayscale(100%) sepia(28%) contrast(1.08);
+  filter: grayscale(100%) sepia(25%) contrast(1.06);
 }
 
 .split-before-wrap {
@@ -759,11 +769,12 @@ body {
   position: absolute;
   top: 12px;
   z-index: 4;
-  background: rgba(15, 23, 42, 0.82);
-  color: #F8FAFC;
+  background: rgba(253, 252, 249, 0.9);
+  color: #1E292B;
+  border: 1px solid rgba(30, 41, 43, 0.12);
   font-size: 0.74rem;
-  font-weight: 600;
-  padding: 4px 10px;
+  font-weight: 700;
+  padding: 4px 11px;
   border-radius: 9999px;
 }
 
@@ -775,10 +786,10 @@ body {
   top: 0;
   bottom: 0;
   width: 2px;
-  background-color: #FFFFFF;
+  background-color: #FDFCF9;
   z-index: 5;
   pointer-events: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 0 8px rgba(30, 41, 43, 0.35);
 }
 
 .split-handle {
@@ -786,14 +797,14 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #FFFFFF;
-  color: #0F172A;
+  background-color: #FDFCF9;
+  color: #1E292B;
   font-size: 0.72rem;
   font-weight: 800;
   padding: 6px 10px;
   border-radius: 9999px;
   white-space: nowrap;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 4px 12px rgba(30, 41, 43, 0.25);
 }
 
 .split-range-overlay {
@@ -886,7 +897,7 @@ body {
   text-align: left;
   padding: 12px 14px;
   border-radius: 12px;
-  background-color: var(--bg-page);
+  background-color: var(--bg-subtle-box);
   border: 1px solid var(--border-base);
   color: var(--text-main);
   cursor: pointer;
@@ -950,7 +961,7 @@ body {
   padding: 11px 13px;
   border-radius: 12px;
   border: 1px solid var(--border-base);
-  background-color: var(--bg-page);
+  background-color: var(--bg-subtle-box);
   cursor: pointer;
 }
 
@@ -970,7 +981,7 @@ body {
 }
 
 .receipt-box {
-  background-color: var(--bg-page);
+  background-color: var(--bg-subtle-box);
   border: 1px solid var(--border-base);
   border-radius: 12px;
   padding: 16px;
@@ -987,7 +998,7 @@ body {
   gap: 12px;
   font-size: 0.84rem;
   padding: 7px 0;
-  border-bottom: 1px dashed var(--border-base);
+  border-bottom: 1px dashed var(--border-hover);
   color: var(--text-sec);
 }
 
@@ -1038,7 +1049,7 @@ body {
   padding: 9px 12px;
   border-radius: 10px;
   border: 1px solid var(--border-base);
-  background-color: var(--bg-page);
+  background-color: var(--bg-subtle-box);
   color: var(--text-main);
   font-size: 0.88rem;
 }
@@ -1083,9 +1094,13 @@ body {
 }
 
 .cat-filter-btn.active {
-  background-color: var(--text-main);
-  color: var(--bg-card);
-  border-color: var(--text-main);
+  background-color: var(--teal-primary);
+  color: #FDFCF9;
+  border-color: var(--teal-primary);
+}
+
+[data-theme="dark"] .cat-filter-btn.active {
+  color: #0F2421;
 }
 
 .catalog-grid {
@@ -1109,7 +1124,7 @@ body {
 .spot-card-media {
   position: relative;
   height: 185px;
-  background-color: var(--bg-page);
+  background-color: var(--bg-subtle-box);
   overflow: hidden;
 }
 
@@ -1162,6 +1177,7 @@ body {
   padding: 36px 0;
   font-size: 0.84rem;
   color: var(--text-sec);
+  background-color: var(--bg-card);
 }
 
 .footer-flex {
@@ -1234,10 +1250,10 @@ body {
   }
   .dock-link.active {
     background-color: var(--teal-primary);
-    color: #FFFFFF;
+    color: #FDFCF9;
   }
   [data-theme="dark"] .dock-link.active {
-    color: #042F2E;
+    color: #0F2421;
   }
   .stats-row,
   .catalog-grid {

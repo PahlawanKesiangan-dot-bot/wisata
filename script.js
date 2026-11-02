@@ -1,6 +1,6 @@
 /* ==========================================================================
-   JELAJAH DELTA — VANILLA JS MODULAR ENGINE (60 FPS)
-   Smart Hide-on-Scroll Navbar | Real Internet Satellite & Road Map | PNG Pass
+   JELAJAH DELTA — WARM DAYLIGHT EDITION (VANILLA JS MODULAR ENGINE)
+   Default Soft Light Theme | Smart Hide Navbar | Real Internet Map | PNG Pass
    ========================================================================== */
 
 (() => {
@@ -22,7 +22,7 @@
       hours: '06.00 – 16.30 WIB (Saat Pasang Pagi)',
       route: '25 menit perahu motor nelayan menyusuri hilir Kali Porong dari Dermaga Tlocor.',
       wikiQuery: 'Mangrove forest river East Java',
-      fallbackPalette: ['#064E3B', '#10B981', 'Ekowisata Mangrove Pulau Sarinah'],
+      fallbackPalette: ['#1E5F55', '#3B8F82', 'Ekowisata Mangrove Pulau Sarinah'],
       desc: 'Daratan aluvial seluas ~80 hektare yang terbentuk dari endapan lumpur di muara Kali Porong, kini rimbun oleh vegetasi bakau Avicennia dan menjadi habitat burung kuntul serta kepiting bakau.'
     },
     {
@@ -39,7 +39,7 @@
       hours: '07.30 – 16.00 WIB (Cahaya Sore Terbaik)',
       route: '3 km sebelah barat jalan arteri Porong; mudah diakses motor maupun mobil.',
       wikiQuery: 'Candi Pari Sidoarjo',
-      fallbackPalette: ['#7C2D12', '#EA580C', 'Monumen Bata Merah Candi Pari 1371 M'],
+      fallbackPalette: ['#9C3E20', '#D46842', 'Monumen Bata Merah Candi Pari 1371 M'],
       desc: 'Candi bata merah masif bertarikh 1293 Saka (1371 M) masa Prabu Hayam Wuruk. Menampilkan perpaduan arsitektur Jawa Timuran dengan struktur atap dan pintu lengkung khas Campa.'
     },
     {
@@ -56,7 +56,7 @@
       hours: '07.30 – 16.00 WIB',
       route: 'Jalur darat barat Sidoarjo arah Krian–Wonoayu melalui jalan desa beraspal mulus.',
       wikiQuery: 'Candi Dermo Sidoarjo',
-      fallbackPalette: ['#9A3412', '#F97316', 'Gapura Paduraksa Candi Dermo Abad ke-14'],
+      fallbackPalette: ['#A84B2B', '#DE7A54', 'Gapura Paduraksa Candi Dermo Abad ke-14'],
       desc: 'Gapura paduraksa bata merah setinggi 13,5 meter peninggalan abad ke-14 yang telah rampung dipugar, menyimpan pahatan relief manusia bersayap dan ornamen kepala kala.'
     },
     {
@@ -73,7 +73,7 @@
       hours: '10.00 – 20.00 WIB',
       route: 'Terletak di jalur utama Surabaya–Sidoarjo (Gedangan) dan kawasan Taman Pinang Indah.',
       wikiQuery: 'Lontong kupang Sidoarjo',
-      fallbackPalette: ['#78350F', '#F59E0B', 'Gastronomi Lontong Kupang & Sate Kerang'],
+      fallbackPalette: ['#8F5B28', '#C98F52', 'Gastronomi Lontong Kupang & Sate Kerang'],
       desc: 'Hidangan ikonik kerang laut mikro (kupang beras) tangkapan nelayan Selat Madura yang disiram kuah bawang putih, jeruk nipis, dan petis udang Sidoarjo, disajikan bersama lento singkong.'
     },
     {
@@ -90,7 +90,7 @@
       hours: '07.00 – 17.00 WIB',
       route: '15 menit ke arah timur dari Bandara Internasional Juanda melintasi hamparan tambak.',
       wikiQuery: 'Milkfish smoked Indonesia bandeng',
-      fallbackPalette: ['#1E3A8A', '#38BDF8', 'Tambak & Pengasapan Bandeng Kalanganyar'],
+      fallbackPalette: ['#24577A', '#4D8AB3', 'Tambak & Pengasapan Bandeng Kalanganyar'],
       desc: 'Sentra tambak air payau penghasil bandeng cabut duri segar tanpa bau tanah yang diasap secara tradisional menggunakan sabut kelapa hingga kulitnya kuning keemasan.'
     },
     {
@@ -107,7 +107,7 @@
       hours: '08.00 – 17.00 WIB (Bisa Praktik Mencanting)',
       route: '5 menit jalan kaki dari Stasiun Sidoarjo atau kawasan Alun-Alun Kota.',
       wikiQuery: 'Batik Sidoarjo',
-      fallbackPalette: ['#881337', '#F43F5E', 'Kampoeng Batik Tulis Jetis Sejak 1675'],
+      fallbackPalette: ['#7E3548', '#B85D73', 'Kampoeng Batik Tulis Jetis Sejak 1675'],
       desc: 'Kampung perajin batik tulis tertua di delta Brantas sejak 1675 dengan ciri khas warna pesisir berani serta motif klasik Merak Beras Utah, Kebon Tebu, dan Kembang Bayem.'
     }
   ];
@@ -124,10 +124,8 @@
     if (currentY <= 48) {
       smartHeader.classList.remove('header-hidden');
     } else if (diff > 7 && currentY > 88) {
-      // Digulir ke bawah -> sembunyikan navbar kapsul
       smartHeader.classList.add('header-hidden');
     } else if (diff < -6) {
-      // Digulir ke atas -> munculkan kembali navbar kapsul
       smartHeader.classList.remove('header-hidden');
     }
 
@@ -142,14 +140,14 @@
     }
   }, { passive: true });
 
-  // --- 3. THEME TOGGLE (DARK / LIGHT) DENGAN IKON SVG TAJAM ---
-  const THEME_KEY = 'jelajah_delta_theme_v2';
+  // --- 3. THEME TOGGLE (DEFAULT: CERAH TEDUH / 'light') ---
+  const THEME_KEY = 'jelajah_delta_theme_v3';
   const htmlRoot = document.documentElement;
   const themeBtn = document.getElementById('theme-toggle');
   const iconSun = document.getElementById('icon-sun');
   const iconMoon = document.getElementById('icon-moon');
 
-  let activeTheme = localStorage.getItem(THEME_KEY) || 'dark';
+  let activeTheme = localStorage.getItem(THEME_KEY) || 'light';
 
   function setTheme(mode, redraw = false) {
     activeTheme = mode;
@@ -164,10 +162,9 @@
   }
 
   themeBtn.addEventListener('click', () => {
-    setTheme(activeTheme === 'dark' ? 'light' : 'dark', true);
+    setTheme(activeTheme === 'light' ? 'dark' : 'light', true);
   });
 
-  // Scroll Spy untuk Navigasi Aktif
   const sections = document.querySelectorAll('section[id], main[id]');
   const spyObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -182,8 +179,7 @@
 
   sections.forEach((sec) => spyObserver.observe(sec));
 
-  // --- 4. PROYEKSI WEB MERCATOR & PEMUAT FOTO PETA DARI INTERNET ---
-  // Zoom 11 Tiles (x: 1664..1666, y: 1065..1067) mencakup seluruh Kab. Sidoarjo & Selat Madura
+  // --- 4. PROYEKSI WEB MERCATOR & PETA INTERNET (DEFAULT: PETA JALAN CERAH) ---
   const MAP_ZOOM = 11;
   const START_TILE_X = 1664;
   const START_TILE_Y = 1065;
@@ -201,7 +197,6 @@
     };
   }
 
-  // Hitung posisi piksel akurat dari koordinat GPS masing-masing destinasi
   DESTINATIONS.forEach((d) => {
     const pt = gpsToSvgXY(d.lat, d.lon);
     d.mapX = pt.x;
@@ -210,7 +205,7 @@
 
   const internetTilesGroup = document.getElementById('internet-map-tiles');
   const mapSourceStatus = document.getElementById('map-source-status');
-  let activeMapLayer = 'satelit'; // 'satelit' atau 'jalan'
+  let activeMapLayer = 'jalan';
 
   function renderInternetMapTiles(layerType) {
     activeMapLayer = layerType;
@@ -238,7 +233,6 @@
         svgImg.setAttribute('height', '256.5');
         svgImg.setAttribute('preserveAspectRatio', 'none');
 
-        // Jika offline / gagal dimuat, sembunyikan tile sehingga peta vektor cadangan di bawahnya tampil bersih
         svgImg.addEventListener('error', () => {
           svgImg.remove();
           mapSourceStatus.textContent = 'Mode Offline: Peta Vektor Lokal Aktif';
@@ -259,7 +253,7 @@
   });
 
   // --- 5. WIKIMEDIA COMMONS ASYNC FETCH + CACHE + FALLBACK VEKTOR ---
-  const CACHE_KEY = 'jelajah_delta_wiki_cache_v2';
+  const CACHE_KEY = 'jelajah_delta_wiki_cache_v3';
   let wikiCache = {};
   try { wikiCache = JSON.parse(sessionStorage.getItem(CACHE_KEY) || '{}'); } catch (_) {}
 
@@ -272,9 +266,9 @@
         </linearGradient>
       </defs>
       <rect width="640" height="400" fill="url(#g)"/>
-      <path d="M0 300 Q160 250 320 295 T640 280 L640 400 L0 400 Z" fill="rgba(2,6,23,0.42)"/>
-      <polygon points="320,95 405,275 235,275" fill="rgba(255,255,255,0.18)"/>
-      <text x="320" y="352" text-anchor="middle" fill="#F8FAFC" font-family="sans-serif" font-size="19" font-weight="bold">${caption}</text>
+      <path d="M0 300 Q160 250 320 295 T640 280 L640 400 L0 400 Z" fill="rgba(24,34,38,0.32)"/>
+      <polygon points="320,95 405,275 235,275" fill="rgba(253,252,249,0.2)"/>
+      <text x="320" y="352" text-anchor="middle" fill="#FDFCF9" font-family="sans-serif" font-size="19" font-weight="bold">${caption}</text>
     </svg>`;
     return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
   }
@@ -307,7 +301,7 @@
     }
   }
 
-  // --- 6. PIN PETA INTERAKTIF & SMOOTH PAN-TO-FOCUS ---
+  // --- 6. PIN PETA CERAH & SMOOTH PAN-TO-FOCUS ---
   const mapCamera = document.getElementById('map-camera');
   const mapPinsGroup = document.getElementById('map-pins');
   const mapFilterPills = document.getElementById('map-filter-pills');
@@ -319,9 +313,13 @@
     mapPinsGroup.innerHTML = '';
     mapFilterPills.innerHTML = '';
 
+    const useLightChip = activeTheme === 'light' && activeMapLayer === 'jalan';
+    const chipBg = useLightChip ? 'rgba(253, 252, 249, 0.94)' : 'rgba(24, 34, 38, 0.88)';
+    const chipText = useLightChip ? '#1E292B' : '#FDFCF9';
+
     DESTINATIONS.forEach((spot) => {
       const isSelected = spot.id === selectedSpot.id;
-      const pinColor = spot.category === 'Sejarah' ? '#F97316' : '#14B8A6';
+      const pinColor = spot.category === 'Sejarah' ? '#B84A27' : '#0F766E';
 
       const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
       g.setAttribute('class', 'map-pin');
@@ -333,9 +331,9 @@
       const shortLabel = spot.name.split('&')[0].trim();
       g.innerHTML = `
         <circle class="pin-pulse" cx="0" cy="0" r="13" style="stroke:${pinColor}"></circle>
-        <circle cx="0" cy="0" r="${isSelected ? 9 : 7}" fill="${isSelected ? '#EA580C' : pinColor}" stroke="#FFFFFF" stroke-width="2.4"></circle>
-        <rect x="-58" y="12" width="116" height="19" rx="6" fill="rgba(15, 23, 42, 0.88)" stroke="${isSelected ? '#FFFFFF' : pinColor}" stroke-width="1"></rect>
-        <text x="0" y="25" text-anchor="middle" fill="#F8FAFC" font-size="9.5" font-weight="700">${shortLabel}</text>
+        <circle cx="0" cy="0" r="${isSelected ? 9 : 7}" fill="${isSelected ? '#B84A27' : pinColor}" stroke="#FDFCF9" stroke-width="2.4"></circle>
+        <rect x="-58" y="12" width="116" height="19" rx="6" fill="${chipBg}" stroke="${pinColor}" stroke-width="1.2"></rect>
+        <text x="0" y="25" text-anchor="middle" fill="${chipText}" font-size="9.5" font-weight="700">${shortLabel}</text>
       `;
 
       g.addEventListener('click', () => focusDestination(spot.id, true));
@@ -437,8 +435,8 @@
     const beforeImg = document.getElementById('split-img-before');
     const afterImg = document.getElementById('split-img-after');
 
-    const fallbackOld = buildFallbackSvg(['#334155', '#1E293B', 'Arsip Pendataan Kolonial Candi Pari']);
-    const fallbackNew = buildFallbackSvg(['#9A3412', '#EA580C', 'Kemegahan Bata Terakota Candi Pari Masa Kini']);
+    const fallbackOld = buildFallbackSvg(['#57534E', '#78716C', 'Arsip Pendataan Kolonial Candi Pari']);
+    const fallbackNew = buildFallbackSvg(['#9C3E20', '#D46842', 'Kemegahan Bata Terakota Candi Pari Masa Kini']);
 
     beforeImg.src = fallbackOld;
     afterImg.src = fallbackNew;
@@ -458,7 +456,7 @@
     }
   }
 
-  // --- 8. KALKULATOR ANGGARAN 1 HARI & BOARDING PASS (.PNG) ---
+  // --- 8. KALKULATOR ANGGARAN 1 HARI & BOARDING PASS HANGAT (.PNG) ---
   const PLAN_PACKAGES = {
     bahari: {
       label: 'Ekowisata Pesisir Bahari',
@@ -560,11 +558,12 @@
 
     pCtx.clearRect(0, 0, w, h);
 
-    pCtx.fillStyle = isDark ? '#020617' : '#F1F5F9';
+    // Latar Kertas Hangat Tidak Silau
+    pCtx.fillStyle = isDark ? '#182226' : '#ECEAE2';
     pCtx.fillRect(0, 0, w, h);
 
-    pCtx.fillStyle = isDark ? '#1E293B' : '#FFFFFF';
-    pCtx.strokeStyle = isDark ? '#334155' : '#CBD5E1';
+    pCtx.fillStyle = isDark ? '#212D32' : '#FDFCF9';
+    pCtx.strokeStyle = isDark ? '#314147' : '#D5D0C3';
     pCtx.lineWidth = 2;
     roundRectPath(pCtx, 18, 18, w - 36, h - 36, 16);
     pCtx.fill();
@@ -573,11 +572,11 @@
     pCtx.save();
     roundRectPath(pCtx, 18, 18, w - 36, 62, 16);
     pCtx.clip();
-    pCtx.fillStyle = '#0D9488';
+    pCtx.fillStyle = '#0F766E';
     pCtx.fillRect(18, 18, w - 36, 62);
     pCtx.restore();
 
-    pCtx.fillStyle = '#FFFFFF';
+    pCtx.fillStyle = '#FDFCF9';
     pCtx.font = 'bold 18px -apple-system, Segoe UI, sans-serif';
     pCtx.fillText('JELAJAH DELTA — SIDOARJO BOARDING PASS', 38, 55);
 
@@ -587,15 +586,15 @@
     const stubX = 485;
     pCtx.save();
     pCtx.setLineDash([6, 6]);
-    pCtx.strokeStyle = isDark ? '#475569' : '#CBD5E1';
+    pCtx.strokeStyle = isDark ? '#43575E' : '#C8C3B6';
     pCtx.beginPath();
     pCtx.moveTo(stubX, 82);
     pCtx.lineTo(stubX, h - 20);
     pCtx.stroke();
     pCtx.restore();
 
-    const fg = isDark ? '#F8FAFC' : '#0F172A';
-    const muted = isDark ? '#94A3B8' : '#64748B';
+    const fg = isDark ? '#ECEAE4' : '#1E292B';
+    const muted = isDark ? '#889699' : '#707D7E';
 
     pCtx.fillStyle = muted;
     pCtx.font = '600 11px -apple-system, sans-serif';
@@ -608,7 +607,7 @@
     pCtx.font = 'bold 22px -apple-system, sans-serif';
     pCtx.fillText(traveler, 38, 136);
 
-    pCtx.fillStyle = '#14B8A6';
+    pCtx.fillStyle = isDark ? '#2DD4BF' : '#0F766E';
     pCtx.font = 'bold 14px ui-monospace, monospace';
     pCtx.fillText(plan.routeCode, 38, 195);
 
@@ -620,10 +619,10 @@
     const qrX = 528;
     const qrY = 104;
     const cell = 7;
-    pCtx.fillStyle = '#FFFFFF';
+    pCtx.fillStyle = '#F6F5F0';
     pCtx.fillRect(qrX - 8, qrY - 8, cell * 15 + 16, cell * 15 + 16);
 
-    pCtx.fillStyle = '#0F172A';
+    pCtx.fillStyle = '#1E292B';
     const seed = traveler.length + latestCalcSummary.pax * 7;
     for (let r = 0; r < 15; r++) {
       for (let c = 0; c < 15; c++) {
@@ -733,7 +732,7 @@
 
   // --- INISIALISASI SAAT HALAMAN DIMUAT ---
   setTheme(activeTheme, false);
-  renderInternetMapTiles('satelit');
+  renderInternetMapTiles('jalan');
   focusDestination('sarinah', false);
   initCandiPariSplitPhotos();
   updateSplitPosition(50);
